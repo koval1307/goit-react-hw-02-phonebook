@@ -1,12 +1,11 @@
-import React from 'react'
+import React from "react";
 import Button from "@material-ui/core/Button";
-import styles from "./contacts-list.module.css"
-
+import styles from "./contacts-list.module.css";
 
 function ContactList({ contactList, deleteContact }) {
   return (
-    <ul className={styles.contact__list} >
-         {contactList.map(el => {
+    <ul className={styles.contact__list}>
+      {contactList.map((el) => {
         return (
           <li key={el.id} className={styles.contactList__item}>
             <div className={styles.contacts}>
@@ -29,4 +28,4 @@ function ContactList({ contactList, deleteContact }) {
   );
 }
 
-export default ContactList
+export default ContactList;

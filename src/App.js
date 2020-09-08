@@ -1,5 +1,5 @@
 import React, { Component}from 'react';
-// import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 import Form from "./components/Form/Form"
 import ContactList from "./components/contactList/ContactList"
 import Filter from "./components/Filter/Filter"
@@ -18,7 +18,7 @@ class App extends Component {
   };
   
   getContact = (addedContact) => {
-    this.state.contacts.some((el) => el.name === addedContact.name)
+    this.state.contacts.find((el) => el.name.toLowerCase() === addedContact.name.toLowerCase())
       ? alert(`${addedContact.name} is already in contacts `)
       : this.setState((prevState) => {
           return {
@@ -44,7 +44,6 @@ class App extends Component {
     return this.state.filter
       ? this.state.contacts.filter(el => 
         el.name.toLowerCase().includes(this.state.filter.toLowerCase())
-    
       )
       : this.state.contacts;
   }

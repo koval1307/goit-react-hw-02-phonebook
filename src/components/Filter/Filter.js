@@ -4,7 +4,6 @@ const Filter = ({filter, getFilterName}) => {
     return (
       <>
             <TextField
-                
           type="text"
           value={filter}
           name="filter"
