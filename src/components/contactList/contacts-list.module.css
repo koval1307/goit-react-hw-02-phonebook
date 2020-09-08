@@ -1,0 +1,23 @@
+.contact__list{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+   
+list-style: none;
+
+}
+.btn{
+margin-bottom: 10px;
+}
+
+.contactList__item{
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size:20px;
+}
+.contacts {
+    display: inline;
+    margin-right: 10px;
+}
